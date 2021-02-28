@@ -24,4 +24,10 @@ public class PaymentController {
     public String getPaymentInfoTimeout(@PathVariable("id") Integer id) {
         return paymentService.paymentInfoTimeout(id);
     }
+
+    @GetMapping(value = "/payment/circuit/{id}")
+    public String getPaymentCircuitBreaker(@PathVariable("id") Integer id) {
+        return paymentService.paymentCircuitBreaker(id);
+
+    }
 }
