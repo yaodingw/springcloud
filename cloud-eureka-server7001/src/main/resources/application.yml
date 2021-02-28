@@ -8,9 +8,9 @@ eureka:
     fetch-registry: false
     service-url:
       # 集群版本
-       defaultZone: http://eureka7002.com:7002/eureka/
+#       defaultZone: http://eureka7002.com:7002/eureka/
       # 单机版本
-#      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
 
   server:
     enable-self-preservation: false

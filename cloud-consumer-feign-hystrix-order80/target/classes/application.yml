@@ -1,0 +1,26 @@
+server:
+  port: 80
+
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka
+
+
+ribbon:
+  # 指的是建立链接所用的时间 , 客户端等待的超时时间
+  ReadTimeout: 8000
+
+# 此配置， 会再feign上声明的接口都添加一个hystrix接口的实现。 类似于加上了HystrixCommand注解， 而且默认的时间是1000秒
+feign:
+  hystrix:
+    enabled: true
+#
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 5000
